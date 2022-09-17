@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <!-- Using Linear Layout as it's simple design here with vertical Views -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.InstructionsFragment">
+
+        <TextView
+            android:id="@+id/instructions_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:fontFamily="@font/arizonia"
+            android:padding="@dimen/_10sdp"
+            android:text="Instructions"
+            android:textAlignment="center"
+            android:textColor="#0a638e"
+            android:textSize="@dimen/_40ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* All your data is secure."
+            style="@style/instruction_textview_style" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* If you faced any issue ,You can call our support Team on 05555."
+            style="@style/instruction_textview_style" />
+
+        <Button
+            android:id="@+id/instrucions_button"
+            android:backgroundTint="#0a638e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Next"
+            android:textSize="@dimen/_16ssp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+</layout>

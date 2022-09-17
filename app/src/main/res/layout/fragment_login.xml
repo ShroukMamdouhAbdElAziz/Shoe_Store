@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Using Constraint layout as it has more flexibility to control the design -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.LoginFragment">
+
+        <ImageView
+            android:id="@+id/shoe_store_image"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/shoestoreimage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email_textView"
+            style="@style/login_textview_style"
+            android:hint="Enter Your Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_store_image" />
+
+        <EditText
+            android:id="@+id/password_textView"
+            style="@style/login_textview_style"
+            android:hint="Enter Your Password"
+            android:inputType="numberPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_textView" />
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/login_button_style"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:text="Register"
+            android:textStyle="normal"
+            android:textSize="@dimen/_16ssp"
+            android:backgroundTint="#0a638e"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_textView" />
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/login_button_style"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:textSize="@dimen/_16ssp"
+            android:backgroundTint="#0a638e"
+            android:text="login"
+            android:textStyle="normal"
+
+            app:layout_constraintBottom_toBottomOf="@id/register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/register_button"
+            app:layout_constraintTop_toBottomOf="@id/password_textView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

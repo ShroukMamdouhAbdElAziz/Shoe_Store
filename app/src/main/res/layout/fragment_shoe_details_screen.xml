@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Using Constraint layout as it has more flexibility to control the design -->
+    <data>
+        <import
+            type="com.example.shoe_store.converter.DoubleConverter"/>
+        <variable
+            name="shoe"
+            type="com.example.shoe_store.models.Shoe" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ShoeDetailsScreen">
+
+        <EditText
+            android:id="@+id/shoe_name"
+            style="@style/instruction_textview_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:hint="Enter Shoe Name "
+            android:text="@={shoe.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/shoe_company"
+            style="@style/instruction_textview_style"
+            android:layout_width="match_parent"
+            android:text="@={shoe.company}"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:hint="Enter Shoe Company"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/shoe_size"
+            style="@style/instruction_textview_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={DoubleConverter.doubleToString(shoe.size)}"
+
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:hint="Enter Shoe Size"
+            android:inputType="number"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_company"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/shoe_description"
+            style="@style/instruction_textview_style"
+            android:layout_width="match_parent"
+            android:text="@={shoe.description}"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:hint="Enter Shoe Description"
+            android:inputType="text"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+
+            android:id="@+id/save_btn"
+            style="@style/login_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:backgroundTint="#0a638e"
+            android:text="Save"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_description" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/login_button_style"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:backgroundTint="#0a638e"
+            android:text="Cancel"
+            android:textSize="@dimen/_16ssp"
+
+            app:layout_constraintBottom_toBottomOf="@id/save_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/save_btn"
+            app:layout_constraintTop_toBottomOf="@id/shoe_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
