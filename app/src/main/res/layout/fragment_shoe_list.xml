@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- Using framelayout to put many components as A stack above each other and Using Constraint layout also here as it has more flexibility to control the design -->
+    <!-- Using framelayout to put many components as A stack above each other and Using linear layout also it display the view vertically -->
     <data>
         <variable
             name="Shoe"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             tools:context=".fragments.ShoeListFragment">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

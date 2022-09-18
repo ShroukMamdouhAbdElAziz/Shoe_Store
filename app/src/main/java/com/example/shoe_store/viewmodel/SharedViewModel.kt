@@ -11,7 +11,7 @@ class SharedViewModel : ViewModel() {
     var listLiveData = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
 
-    fun addShoe(shoe: Shoe) {
+         fun addShoe(shoe: Shoe) {
 
         listLiveData.value?.add(shoe)
 
