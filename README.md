@@ -2,24 +2,35 @@
 # Shoe Store Inventory App 
 
 This app applied the skills in building layouts and navigation .
+
 This project consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
 
--Login screen: Email and password fields and labels plus create and login buttons
--Welcome onboarding screen
--Instructions onboarding screen
--Shoe Listing screen
--Shoe Detail screen for adding a new shoe
+-Login screen: Email and password fields and labels plus create and login buttons.
+
+-Welcome onboarding screen.
+
+-Instructions onboarding screen.
+
+-Shoe Listing screen.
+
+-Shoe Detail screen for adding a new shoe.
+
 
 While the login and onboarding pages will not do anything, the user will need to save the login state so that the login and onboarding pages do not show again.
 The shoe listing page will show the list of shoes and show a button for adding a new shoe,
 while the detail page will be for adding a shoe entry. All entries will be saved only as long as the app is running.
 
 
-#Tools & Technologies used
+# Tools & Technologies used:
+
 viewBinding : instead of inflate the layouts.
+
 DataBinding : used one way dataBinding  and Two way dataBinding.
+
 SharedViewModel : to share the data between the fragments.
+
 viewModel and LiveData.
+
 Navigation library to navigate between the screens and automatic up navigation
 
 # Video of App
